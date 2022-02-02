@@ -101,7 +101,10 @@ img {
 }
 
 .header-link-mail {
-    font-style: 400;
+    display: flex;
+
+    fill: var(--function-text-color);
+
     font-weight: 500;
     font-size: 14px;
     line-height: calc(16 / 14);
@@ -114,9 +117,16 @@ img {
     color: var(--accent-text-color);
     fill: var(--accent-text-color);
 }
-
+.header-icon {
+    margin-right: 10px;
+    /* 
+    fill: var(--function-text-color); */
+}
 .header-link-tel {
-    font-style: 400;
+    display: flex;
+
+    fill: var(--function-text-color);
+
     font-weight: 500;
     font-size: 14px;
     line-height: calc(16 / 14);
@@ -145,9 +155,13 @@ img {
         url(../images/hero-bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    block-size: cover;
+    background-size: cover;
     padding-top: 200px;
     padding-bottom: 200px;
+
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .hero-title {
     font-family: 'Roboto', sans-serif;
@@ -176,10 +190,16 @@ img {
     min-width: 200px;
     height: 50px;
 }
-
+/* .hero-conteiner-btn:hover,
+.hero-conteiner-btn:focus {
+    color: var(--accent-text-color);
+    min-width: 200px;
+    height: 50px;
+} */
 .hero-btn:hover,
 .hero-btn:focus {
-    color: var(--accent-text-color);
+    /* color: var(--title-text-color); */
+    border-radius: 0px;
 }
 
 /* -----------about--------------- */
@@ -221,6 +241,17 @@ img {
 }
 .about-item + .about-item {
     margin-left: 30px;
+}
+.about-icon {
+    margin-bottom: 30px;
+
+    width: 270px;
+    height: 120px;
+    background: #f5f4fa;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .about-subtitle {
@@ -358,11 +389,6 @@ img {
 }
 .clients-list {
     display: flex;
-    justify-content: center;
-}
-.clients-item {
-    border: 1px solid #afb1b8;
-    border-radius: 4%;
 }
 .clients-item + .clients-item {
     margin-left: 30px;
@@ -371,21 +397,21 @@ img {
     width: 170px;
     height: 92px;
 
+    border: 1px solid #afb1b8;
+    border-radius: 4%;
+
     display: flex;
     align-items: center;
     justify-content: center;
     color: #afb1b8;
 }
-.clients-link:hover,
-.clients-link:focus {
-    border: 1px solid #2196f3;
-}
+
 .clients-icon {
     fill: currentColor;
 }
-.clients-icon:hover,
-.clients-icon:focus {
-    fill: var(--accent-text-color);
+.clients-link:hover {
+    border: 1px solid #2196f3;
+    color: var(--accent-text-color);
 }
 
 /* -----------footer------------- */
@@ -394,6 +420,11 @@ img {
     background-color: #2f303a;
 }
 .footer-conteiner {
+    display: flex;
+    align-items: baseline;
+}
+.footer-conteiner-box + .footer-conteiner-box {
+    margin-left: 70px;
 }
 .footer-logo {
     font-family: 'Raleway', sans-serif;
@@ -411,7 +442,6 @@ img {
     display: flex;
 
     margin-top: 20px;
-    padding-bottom: 60px;
 
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -479,7 +509,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 .footer-socials-icon {
     fill: var(--title-text-color);
@@ -498,25 +528,6 @@ img {
 
 .filter-item + .filter-item {
     margin-left: 8px;
-}
-
-.filter-btn-all {
-    font-family: inherit;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: calc(26 / 16);
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.03em;
-    background: #f5f4fa;
-    border-radius: 5px;
-    border-color: transparent;
-    min-width: 73px;
-    height: 38px;
-}
-.filter-btn-all:hover,
-.filter-btn-all:focus {
-    background-color: var(--accent-text-color);
 }
 
 .filter-btn {
@@ -538,6 +549,7 @@ img {
 .filter-btn:hover,
 .filter-btn:focus {
     background-color: var(--accent-text-color);
+    color: var(--title-text-color);
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
@@ -558,8 +570,14 @@ img {
     margin-left: 30px;
     margin-bottom: 30px;
 }
-.hero-item-two:hover {
-    box-shadow: 5px 5px 4px 2px rgba(0, 0, 0, 0.3);
+
+.hero-link {
+    border: 1px solid #eeeeee;
+    display: block;
+}
+.hero-link:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .hero-text-box {
@@ -569,7 +587,6 @@ img {
     padding-bottom: 20px;
 
     background: #ffffff;
-    border: 1px solid #eeeeee;
     box-sizing: content-box;
 }
 
